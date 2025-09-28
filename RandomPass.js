@@ -1,4 +1,4 @@
-const passwordBox = document.getElementById("password"); // Match case
+const passwordBox = document.getElementById("password");
 const length = 12;
 
 const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -21,13 +21,23 @@ function createPassword() {
     passwordBox.value = password;
 }
 
+const copyText = document.getElementById("copyText");
+
+
 function copyPassword() {
-    // Copy the value of the password box
     navigator.clipboard.writeText(passwordBox.value)
         .then(() => {
-            alert("Password copied to clipboard!");
+            // alert("Password copied to clipboard!");
+            copyText.style.display = "block";
+            setTimeout(() => {
+                copyText.style.display = "none";
+
+
+            }, 2000);
         })
         .catch(err => {
             console.error("Failed to copy: ", err);
-        });
+        }
+        );
 }
+

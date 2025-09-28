@@ -26,7 +26,19 @@ body {
     justify-content: space-between;
     padding: 26px 20px;
     border-radius: 5px;
+    position: relative;
+
+    p{
+        color: black;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin-right: 10px;
+        margin-bottom: 5px;
+    }
 }
+
+
 
 .container h1 {
     font-weight: 500;
